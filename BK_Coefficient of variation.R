@@ -1,5 +1,5 @@
 COV <- function(file.csv) {
-        # Enable xts and smooth package
+        # Enable xts package
         library(xts)
         
         # Import file
