@@ -6,26 +6,31 @@ author: "Nattapad Salasawadi"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
+***
 ## 1. Introduction
 
 Bluff Kup Cafe & Thai Kitchen is an existing business in Melbourne. Although the business’ revenue keeps increasing every year, the ineffectiveness of the inventory causes a large amount of the inventory cost. Additionally, due to a competition within the area, the business is required to retain a number of regular customers and also attract new patrons. To enhance the business performance, business analytics will be applied to utilise historical data collected by the point.of.sale (POS) system. The report aims to demonstrate how to apply business analytics to the actual business environment, a case study of Bluff Kup Cafe and Thai Kitchen, and propose recommendations, particularly in inventory management, for the business to enhance its operations.
 
+***
 ## 2. Company Overview
 
-Bluff Kup Cafe & Thai Kitchen is a small local business located in Black Rock, Melbourne.
+Bluff Kup Cafe & Thai Kitchen is a small local business located in Black Rock, Melbourne **(Figure 1.)**.
 The main objective of the restaurant is to provide customers with Thai authentic food and good
 customer service. The restaurant is far away from the city of Melbourne around thirty minutes, so most of the patrons are local and regular. Additionally, there are other Thai cruise providers which are considered as major competitors in the area and neighbouring suburbs. Because of the competition, the restaurant is required to offer meals at economical prices in order to be more competitive.
 
 In the hospitality industry, inventory management has played an important role in driving revenue. In order to provide a variety of foods to customers, the restaurant is required to carry a high-level of inventory (Jung & Yoon 2012). Additionally, most of the food ingredients are perishable items which can out of the shelf life before being fully used. Finally, new products might not be successfully introduced to customers. This causes losses in investments and food waste. Because the inventory management is significantly related to the restaurant’s income, issues regarding this area are selected for investigating.
 
+##### **Figure 1.** Location of Bluff Kup Cafe & Thai Kitchen in Melbourne
+![](Images/map-01.jpg)
+
+***
 ## 3. Identified Problems
 ### 3.1 Identified Problems
 The inventory review policy adopted by the restaurant is a periodic review policy. It seems to be convenient to employees because they are not required to frequently monitor the inventory. In some cases, however, particular ingredients are stock-out and customer needs are not satisfied. As workers are allowed to determine a quantity of replenishment based on their own assumptions, additionally, the restaurant’s inventory policy seems to be subjective and biased. To improve this problem, the business may adopt an objective and qualitative inventory policy (Wisner et al. 2016).
 
 ### 3.2 Food Waste
 Another considerable issue is food waste. Since the restaurant is unable to anticipate demands, excess inventory is more likely to occur. In the food industry, managers and kitchen workers are required to be concerned about hygiene and safety (Glanz et al. 2007). Therefore, major ingredients occasionally need to be discarded before they being efficiently used because of they perishing. By adopting predictive models and statistical methods, the business is enabled to cope with uncertainty in demand (Stefanovic 2014).
-***
+
 ```{r COV}
 RevCon <- function(directory) {
         
@@ -59,12 +64,12 @@ RevCon <- function(directory) {
 }
 ```
 
-
-As a result of the created function, contribution of individual ingredients can be calculated by inputting a name of the directory containing .csv file.
+***
+As a result of the created function, contribution of individual ingredients can be calculated by inputting a name of the directory containing .csv file. The results is presented in the following table **(Table 1.)**.
 
 #### **Table 1.** Contribution of ingredient to the total revenue
-Inventory | Total_Sales | Contribution | Cumulative
-------------- | ------------- | ------------- | -------------
+Inventory | Total_Sales | Contribution (%) | Cumulative (%)
+------------- | :-------------: | :-------------: | -----:
 Chicken  |  193099.0   |   19.311  |  19.311
 Prawn  |  143169.0   |   14.318   |  33.629
 Beef  |  100472.0    |   10.048   |  43.677
