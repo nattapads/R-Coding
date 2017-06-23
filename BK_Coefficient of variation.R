@@ -1,9 +1,14 @@
-COV <- function(file.csv) {
+COV <- function(directory) {
         # Enable xts package
         library(xts)
         
-        # Import file.csv
-        Data.df <- read.csv(file.csv)
+        # Import and merge file.csv from directory
+        files_list <- list.files(directory, full.names=TRUE)
+        no_of_files <- length(files_list)
+        Data.df <- data.frame()
+        for(h in 1:no_of_files) {
+                Data.df <- rbind(Data.df, read.csv(files_list[h]))
+        }
         
         # Change the type of object in main_ingredient and create_date
         Data.df$main_ingredient <- as.character(Data.df$main_ingredient)
@@ -81,4 +86,4 @@ COV <- function(file.csv) {
 }
 
 ## Test
-COV("DataBK.csv")
+COV("BK")
