@@ -4,18 +4,18 @@
 ***
 ### 1. Introduction
 
-Bluff Kup Cafe & Thai Kitchen is an existing business in Melbourne. Although the business’ revenue keeps increasing every year, the ineffectiveness of the inventory causes a large amount of the inventory cost. Additionally, due to a competition within the area, the business is required to retain a number of regular customers and also attract new patrons. To enhance the business performance, business analytics will be applied to utilise historical data collected by the point.of.sale (POS) system. The report aims to demonstrate how to apply business analytics to the actual business environment, a case study of Bluff Kup Cafe and Thai Kitchen, and propose recommendations, particularly in inventory management, for the business to enhance its operations.
+Bluff Kup Cafe & Thai Kitchen is an existing business in Melbourne. Although the business’ revenue keeps increasing every year, the ineffectiveness of the inventory causes a large amount of the inventory cost. Additionally, due to a competition within the area, the business is required to retain a number of regular customers and also attract new patrons. To enhance the business performance, business analytics will be applied to utilise historical data collected by the point-of-sale (POS) system. The report aims to demonstrate how to apply business analytics to the actual business environment, a case study of Bluff Kup Cafe and Thai Kitchen, and propose recommendations, particularly in inventory management, for the business to enhance its operations.
 
 ***
 ### 2. Company Overview
 
-Bluff Kup Cafe & Thai Kitchen is a small local business located in Black Rock, Melbourne **(Figure 1.)**.
+Bluff Kup Cafe & Thai Kitchen is a small local business located in Black Rock, Melbourne **(Figure 1)**.
 The main objective of the restaurant is to provide customers with Thai authentic food and good
 customer service. The restaurant is far away from the city of Melbourne around thirty minutes, so most of the patrons are local and regular. Additionally, there are other Thai cruise providers which are considered as major competitors in the area and neighbouring suburbs. Because of the competition, the restaurant is required to offer meals at economical prices in order to be more competitive.
 
 In the hospitality industry, inventory management has played an important role in driving revenue. In order to provide a variety of foods to customers, the restaurant is required to carry a high-level of inventory (Jung & Yoon 2012). Additionally, most of the food ingredients are perishable items which can out of the shelf life before being fully used. Finally, new products might not be successfully introduced to customers. This causes losses in investments and food waste. Because the inventory management is significantly related to the restaurant’s income, issues regarding this area are selected for investigating.
 
-##### **Figure 1.** Location of Bluff Kup Cafe & Thai Kitchen in Melbourne
+##### **Figure 1** Location of Bluff Kup Cafe & Thai Kitchen in Melbourne
 ![](Images/map-01.jpg)
 
 ***
@@ -60,9 +60,9 @@ RevCon <- function(directory) {
 ```
 
 ***
-As a result of the created function, contribution of individual ingredients can be calculated by inputting a name of the directory containing .csv file. The results is presented in the following table **(Table 1.)**.
+As a result of the created function, contribution of individual ingredients can be calculated by inputting a name of the directory containing .csv file. The results is presented in the following table **(Table 1)**.
 
-##### **Table 1.** Contribution of ingredient to the total revenue
+##### **Table 1** Contribution of ingredient to the total revenue
 Inventory | Total_Sales | Contribution (%) | Cumulative (%)
 ------------- | :-------------: | :-------------: | -----:
 Chicken  |  193099.0   |   19.311  |  19.311
