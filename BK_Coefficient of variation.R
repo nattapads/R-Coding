@@ -42,16 +42,20 @@ COV <- function(file.csv) {
                 colnames(Menu_List)[1] <- "Weekly"
                 
                 # Identify any outlier
-                Lower <- 1.5*quantile(Menu_List$Weekly, prob = 0.25)
-                Upper <- 1.5*quantile(Menu_List$Weekly, prob = 0.75)
+                IQRs <- quantile(Menu_List$Weekly, prob = 0.75) - 
+                        quantile(Menu_List$Weekly, prob = 0.25)
+                Lower <- quantile(Menu_List$Weekly, prob = 0.25) - 
+                        1.5*IQRs
+                Upper <- quantile(Menu_List$Weekly, prob = 0.75) + 
+                        1.5*IQRs
                 Medians <- median(Menu_List$Weekly)
                 
-                # Treat the outlier
+                # Treat the outlier by applying 5-day centred moving average
                 for (l in 1:length(Menu_List[,1])){
                         if (Menu_List[l,1] < Lower) {
-                                Menu_List[l,1] <- Medians
+                                Menu_List[l,1] <- round(mean(Menu_List[l-2:l+2,1], digits = 2))
                         } else if (Menu_List[l,1] > Upper) {
-                                Menu_List[l,1] <- Medians
+                                Menu_List[l,1] <- round(mean(Menu_List[l-2:l+2,1], digits = 2))
                         } else if (Menu_List[l,1] == 0) {
                                 Menu_List[l,1] <- 0
                         } else {
